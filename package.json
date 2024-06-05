@@ -1,0 +1,26 @@
+{
+  "name": "js-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rochiyat/js-utils.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rochiyat/js-utils/issues"
+  },
+  "homepage": "https://github.com/rochiyat/js-utils#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "crypto-js": "^4.2.0",
+    "moment": "^2.30.1"
+  }
+}
