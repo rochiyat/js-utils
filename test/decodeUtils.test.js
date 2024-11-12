@@ -1,5 +1,5 @@
 import { decodeFromBase64, decodeFromBase64Bulk } from '../src/utils/decodeUtils.js';
-import { assertEqual, assertArrayEqual } from '../src/helpers/test.helper.js';
+import { assertEqual, assertArrayEqual } from '../src/helpers/testHelper.js';
 
 /**
  * Runs a test to verify the functionality of the decodeFromBase64 function.
