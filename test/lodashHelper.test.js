@@ -1,4 +1,4 @@
-import { isEmpty, setCamelCase, setSnakeCase } from '../src/helpers/lodashHelper.js';
+import { isEmpty, setCamelCase, setSnakeCase, setKebabCase } from '../src/helpers/lodashHelper.js';
 import { assertEqual } from '../src/helpers/testHelper.js';
 
 /**
@@ -40,6 +40,13 @@ function runIsEmptyTests() {
   assertEqual(setSnakeCase('setCamelCase'), 'set_camel_case', "Should convert 'setCamelCase' to 'set_camel_case'");
   assertEqual(setSnakeCase('Make 123 camel-case'), 'make_123_camel_case', "Should convert 'Make 123 camel-case' to 'make_123_camel_case'");
   assertEqual(setSnakeCase('FOO_bar-baz'), 'foo_bar_baz', "Should convert 'FOO_bar-baz' to 'foo_bar_baz'");
+
+  // Test cases for setKebabCase
+  console.log("Running tests for setKebabCase...");
+  assertEqual(setKebabCase('helloWorld'), 'hello-world', "Should convert 'helloWorld' to 'hello-world'");
+  assertEqual(setKebabCase('setCamelCase'), 'set-camel-case', "Should convert 'setCamelCase' to 'set-camel-case'");
+  assertEqual(setKebabCase('Make 123 camel-case'), 'make-123-camel-case', "Should convert 'Make 123 camel-case' to 'make-123-camel-case'");
+  assertEqual(setKebabCase('FOO_bar-baz'), 'foo-bar-baz', "Should convert 'FOO_bar-baz' to 'foo-bar-baz'");
 
   console.log("All tests passed!");
 }

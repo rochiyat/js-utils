@@ -60,3 +60,17 @@ export function setSnakeCase(str) {
     // changes to lowercase
     .toLowerCase();
 }
+
+/**
+ * Converts a given string to kebab-case.
+ *
+ * This function transforms a string into kebab-case by first converting it
+ * to snake_case using the `setSnakeCase` function, and then replacing
+ * underscores with hyphens.
+ *
+ * @param {string} str - The input string to be converted.
+ * @returns {string} - The converted string in kebab-case.
+ */
+export function setKebabCase(str) {
+  return setSnakeCase(str).replace(/_/g, '-');
+}
