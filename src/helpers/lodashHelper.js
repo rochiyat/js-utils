@@ -32,3 +32,31 @@ export function isEmpty(value) {
   // For other types (like functions), consider as not empty
   return false;
 }
+
+/**
+ * Convert a string to camelCase.
+ * @param {string} str - The input string.
+ * @returns {string} - The camelCase formatted string.
+ */
+export function setCamelCase(str) {
+  return str
+    .toLowerCase() // Ubah semua karakter menjadi huruf kecil
+    .replace(/[-_ ]+(\w)/g, (_, char) => char.toUpperCase()) // Ubah huruf setelah -, _, atau spasi menjadi huruf besar
+    .replace(/[^a-zA-Z0-9]/g, ''); // Hapus karakter non-alfanumerik
+}
+
+/**
+ * Converts a given string from camelCase to snake_case.
+ *
+ * @param {string} str - The camelCase string to be converted.
+ * @returns {string} - The converted snake_case string.
+ */
+export function setSnakeCase(str) {
+  return str
+    // changes capital letter to underscore followed by lowercase letter
+    .replace(/([a-z])([A-Z])/g, '$1_$2')
+    // separates with underscore on non-alphanumeric (space, punctuation, etc.)
+    .replace(/[\s\-]+/g, '_')
+    // changes to lowercase
+    .toLowerCase();
+}
