@@ -27,13 +27,3 @@ export function extractPostalCodeAddressString(source, payload) {
 
   return postalCode;
 }
-
-export function setCamelCase(payload) {
-  
-}
-
-console.log(setCamelCase({
-  'firstName': 'John',
-  'lastName': 'Doe',
-  'age': 30
-}));
