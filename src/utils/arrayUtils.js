@@ -7,7 +7,6 @@ export function removeDuplicates(array) {
   return [...new Set(array)];
 }
 
-
 /**
  * Removes duplicates from an array of objects based on a key.
  * @param {Array} array - The array of objects to remove duplicates from.

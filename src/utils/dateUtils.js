@@ -1,5 +1,3 @@
-import moment from 'moment';
-
 /**
  * Generates a random timestamp string with a length of 17 digits.
  * 
@@ -10,7 +8,7 @@ import moment from 'moment';
  */
 export function generateRandomTimestamp() {
     const now = new Date();
-  
+
     // Ambil komponen tanggal dan waktu
     const year = now.getFullYear().toString().padStart(4, '0');
     const month = (now.getMonth() + 1).toString().padStart(2, '0'); // Bulan dari 0-11, jadi ditambah 1
@@ -54,7 +52,37 @@ export function isValidReservedDate(reservedDate, addDate) {
     const currentDate = moment().format('YYYY-MM-DD');
     let isValid = true;
     if (moment(reservedDate).add(addDate, 'days').isBefore(currentDate)) {
-      isValid = false;
+        isValid = false;
     }
     return isValid;
+}
+
+/**
+ * Gets the current date.
+ * 
+ * @returns {Date} The current date.
+ */
+export function getCurrentDate() {
+    return new Date();
+}
+
+/**
+ * Gets the timezone offset.
+ * 
+ * @returns {number} The timezone offset.
+ */
+export function timezoneOffset() {
+    return new Date().getTimezoneOffset();
+}
+
+/**
+ * Formats a date to a given format.
+ * 
+ * @param {Date} date - The date to format.
+ * @param {string} format - The format to format the date in.
+ * @returns {string} The formatted date.
+ */
+export function formatDate(date, format) {
+    const dateObj = new Date(date);
+    return dateObj.toLocaleDateString(format);
 }
