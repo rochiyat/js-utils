@@ -74,3 +74,12 @@ export function setSnakeCase(str) {
 export function setKebabCase(str) {
   return setSnakeCase(str).replace(/_/g, '-');
 }
+
+/**
+ * Converts a given string to title case.
+ * @param {string} str - The input string to be converted.
+ * @returns {string} - The converted string in title case.
+ */
+export function setTitleCase(str) {
+  return str.replace(/\b\w+/g, (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase());
+}
